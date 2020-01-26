@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Crash Course | Selectors</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>
+	<style>
+			body{
+				font-size: 17px;
+				font-family: arial;
+				background: lightgrey;
+				line-height: 1.5m;
+			}
+			header{
+				background: #333;
+				color: #fff;
+				padding: 20px;
+				text-align: center;
+				border-bottom: 4px #000 solid;
+				margin-bottom: 10px;
+			}
+
+			#container{
+				width: 90%;
+				margin: auto;
+				padding: 10px;
+			}
+	</style>
+</head>
+<body>
+
+	<header>
+		<h1>jQuery Crash Course</h1>
+</header>
+	<div id="contaniner">
+		<h3>Mouse Events<h3>
+			<button id="btn1">Button 1</button>
+			<button id="btn2">Button 2</button>
+			<p class="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet a culpa, asperiores dolorum maxime explicabo exercitationem veritatis deleniti, hic molestiae voluptatem, magnam fugiat enim id, harum neque architecto impedit corrupti! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi accusantium nihil minima dolorem, obcaecati, similique aspernatur velit. Laborum odit velit aut quos sequi, molestiae, voluptatibus delectus aperiam error inventore dicta.</p>
+</div>
+		
+	<script>
+		$(document).ready(function(){
+			/*
+			$('#btn1').click(function(){
+				alert('button clicked!');
+			});
+			
+			$('#btn1').on('click', function(){
+				alert('Button Clicked!');
+			});
+		
+			*/
+
+			$('#btn1').on('click', function(){
+				//$('.para1').hide();
+				$('.para1').toggle();
+			});
+				$('#btn2').on('click', function(){
+					$('.para1').show();
+			});
+
+
+	</script>
+	
+</body>
+</html>
